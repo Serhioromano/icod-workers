@@ -9,7 +9,7 @@ type Bindings = {
 const app = new Hono<{ Bindings: Bindings }>()
 
 app.get('/', async (c) => {
-    c.env.KV.put('key', 'value');
+    await c.env.KV.put('key', 'value3');
     const value = await c.env.KV.get('key');
     const R1 = await c.env.KV.get('R1');
     const secr = await c.env.SUPER_SECRET.get();
