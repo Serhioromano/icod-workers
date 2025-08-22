@@ -2,5 +2,14 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "icod-workers",
   "compatibility_date": "2025-08-03",
-  "main": "./src/index.ts"
+  "main": "./src/index.ts",
+  "vars": {
+    "TEST_VAR": "Hello from env variable"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "7e1e015eb5a943d794791345104629a3"
+    }
+  ],
 }
