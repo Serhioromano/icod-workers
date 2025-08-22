@@ -19,3 +19,5 @@ Pass the `CloudflareBindings` as generics when instantiation `Hono`:
 // src/index.ts
 const app = new Hono<{ Bindings: CloudflareBindings }>()
 ```
+
+npx wrangler secrets-store secret create 2e9e787b97664651880b5aa0af80639a --name SUPER_SECRET --scopes workers
