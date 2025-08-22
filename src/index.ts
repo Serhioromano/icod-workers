@@ -10,7 +10,8 @@ const app = new Hono<{ Bindings: Bindings }>()
 app.get('/', async (c) => {
     c.env.KV.put('key', 'value');
     const value = await c.env.KV.get('key');
-    return c.text(`Env var: ${c.env.TEST_VAR} and -- ${value}`);
+    const R1 = await c.env.KV.get('R1');
+    return c.text(`Env var: ${c.env.TEST_VAR} and -- ${value} and R1=${R1}`);
 })
 
 export default app
